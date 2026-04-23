@@ -24,7 +24,7 @@ const GATE_DESTINATIONS = {
     title: "Browse representative sample clips.",
     intro: "Enter your details and we'll open the sample index in a new tab.",
     submit: "Open samples",
-    url: "https://docs.google.com/spreadsheets/d/1j9zLG9V6roA0YyZ0iXxCV0_eADoGG-qLVk3dwKG4oC8/edit?usp=sharing",
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQe1Jp87YUicZ5cQrIYXv8JZWv2nmzROcZLYX_9ln4LR4m5iworfAinf5k0r9NhjhG5nejATosIFepR/pubhtml",
   },
   talk: {
     eyebrow: "Talk to the team",
