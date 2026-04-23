@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing · Humyn Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Humyn Labs">
+        <img src="assets/logo.png" alt="Humyn Labs" class="logo" />
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#" class="nav-link" data-gate="spec">Spec Sheet</a>
+        <a href="#" class="nav-link" data-gate="samples">Samples</a>
+        <a href="#" class="nav-link active">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="app">
+    <div class="app-grid">
+      <!-- LEFT — Dataset Size -->
+      <section class="panel panel-left">
+        <header class="panel-head">
+          <h1 class="section-title">Dataset Size</h1>
+          <button class="reset-btn" id="reset-btn" type="button">
+            Reset <span aria-hidden="true">↺</span>
+          </button>
+        </header>
+
+        <div class="region-stack">
+          <div class="region-block" data-region="apac">
+            <div class="region-name">APAC</div>
+            <div class="region-body">
+              <div class="hours-field">
+                <label class="label" for="apac-hours">Hours</label>
+                <input
+                  type="number"
+                  min="0"
+                  step="1"
+                  value="70000"
+                  id="apac-hours"
+                  class="hour-input"
+                  inputmode="numeric"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="licence-field">
+                <span class="label">Licence</span>
+                <div class="seg-control" role="radiogroup" aria-label="APAC licence">
+                  <label class="seg-opt">
+                    <input type="radio" name="apac-licence" value="non-exclusive" checked />
+                    <span class="seg-inner">
+                      <span class="seg-name">Non-exclusive</span>
+                      <span class="seg-rate">$4.80/hr</span>
+                    </span>
+                  </label>
+                  <label class="seg-opt">
+                    <input type="radio" name="apac-licence" value="exclusive" />
+                    <span class="seg-inner">
+                      <span class="seg-name">Exclusive</span>
+                      <span class="seg-rate">$7.96/hr</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="region-block" data-region="latam">
+            <div class="region-name">LATAM</div>
+            <div class="region-body">
+              <div class="hours-field">
+                <label class="label" for="latam-hours">Hours</label>
+                <input
+                  type="number"
+                  min="0"
+                  step="1"
+                  value="30000"
+                  id="latam-hours"
+                  class="hour-input"
+                  inputmode="numeric"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="licence-field">
+                <span class="label">Licence</span>
+                <div class="seg-control" role="radiogroup" aria-label="LATAM licence">
+                  <label class="seg-opt">
+                    <input type="radio" name="latam-licence" value="non-exclusive" checked />
+                    <span class="seg-inner">
+                      <span class="seg-name">Non-exclusive</span>
+                      <span class="seg-rate">$8.50/hr</span>
+                    </span>
+                  </label>
+                  <label class="seg-opt">
+                    <input type="radio" name="latam-licence" value="exclusive" />
+                    <span class="seg-inner">
+                      <span class="seg-name">Exclusive</span>
+                      <span class="seg-rate">$14.11/hr</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT — Price Estimate -->
+      <section class="panel panel-right">
+        <header class="panel-head">
+          <h2 class="section-title">Price Estimate</h2>
+        </header>
+
+        <div class="breakdown">
+          <div class="br-row">
+            <div class="br-desc">
+              <span class="br-region">APAC</span>
+              <span class="br-licence" id="apac-licence-label">Non-exclusive</span>
+            </div>
+            <div class="br-calc">
+              <span id="apac-hours-out">70,000</span> hrs
+              <span class="br-times">×</span>
+              $<span id="apac-rate">4.80</span> / hr
+            </div>
+            <div class="br-amount">
+              $<span id="apac-subtotal">336,000.00</span>
+            </div>
+          </div>
+          <div class="br-row">
+            <div class="br-desc">
+              <span class="br-region">LATAM</span>
+              <span class="br-licence" id="latam-licence-label">Non-exclusive</span>
+            </div>
+            <div class="br-calc">
+              <span id="latam-hours-out">30,000</span> hrs
+              <span class="br-times">×</span>
+              $<span id="latam-rate">8.50</span> / hr
+            </div>
+            <div class="br-amount">
+              $<span id="latam-subtotal">255,000.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <div class="total-meta">
+            <div class="total-label">TOTAL</div>
+            <div class="total-sub">
+              <span id="total-hours">100,000</span> hrs ·
+              $<span id="effective-rate">5.91</span> / hr effective
+            </div>
+          </div>
+          <div class="total-amount">
+            $<span id="grand-total">591,000.00</span>
+          </div>
+        </div>
+
+        <p class="pull-quote">
+          Every hour, captured by
+          <span class="hl">verified &amp; consenting humans</span>.
+        </p>
+
+        <div class="cta-row">
+          <button class="cta-btn" id="talk-btn" data-gate="talk" type="button">
+            Talk to the team <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">Humyn Labs 2026</div>
+  </footer>
+
+  <!-- Info-capture gate (reused for Spec Sheet, Samples, Talk to the team) -->
+  <div class="modal-overlay" id="gate-modal" hidden>
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gate-title"
+    >
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <div class="eyebrow" id="gate-eyebrow">Request access</div>
+      <h3 class="modal-title" id="gate-title">Share a few details to continue.</h3>
+      <p class="modal-intro" id="gate-intro">We only use this to follow up — nothing more.</p>
+
+      <form class="modal-form" id="gate-form" novalidate>
+        <label class="field">
+          <span class="label">Name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label class="field">
+          <span class="label">Work email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label class="field">
+          <span class="label">Organization</span>
+          <input type="text" name="organization" required autocomplete="organization" />
+        </label>
+        <button type="submit" class="cta-btn" id="gate-submit">
+          Continue <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
