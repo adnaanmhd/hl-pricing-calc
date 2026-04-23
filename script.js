@@ -17,7 +17,7 @@ const GATE_DESTINATIONS = {
     title: "Access the dataset spec sheet.",
     intro: "Enter your details and we'll open the PDF in a new tab.",
     submit: "Open spec sheet",
-    url: "https://drive.google.com/file/d/1EJNm6yoKtTl9EadykMnODoOg7zwOEeT0/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1finTJyf_7zv_JnsIxYTngQludDYajKwQ/view?usp=sharing",
   },
   samples: {
     eyebrow: "Samples",
